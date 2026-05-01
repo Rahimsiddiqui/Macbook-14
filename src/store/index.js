@@ -10,7 +10,7 @@ const useMacbookStore = create((set) => ({
   reset: () =>
     set({
       color: "#e3e3e3",
-      scale: 0.08,
+      scale: 0.09,
     }),
 }));
 
