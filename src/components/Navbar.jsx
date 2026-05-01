@@ -2,8 +2,8 @@ import { navLinks } from "../constants";
 
 const Navbar = () => {
   return (
-    <header className="mt-2">
-      <nav>
+    <header>
+      <nav className="py-5">
         <img src="/logo.svg" alt="Apple Logo" title="Apple Logo" />
 
         <ul>

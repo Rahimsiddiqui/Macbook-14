@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import useMacbookStore from "../store/index";
 import { Canvas } from "@react-three/fiber";
-import MacbookModel14 from "./models/Macbook-14";
 import StudioLights from "./three/StudioLights";
 import ModelSwitcher from "./three/ModelSwitcher";
 import { useMediaQuery } from "react-responsive";
@@ -25,9 +24,9 @@ const ProductViewer = () => {
             <div
               className={clsx(
                 "bg-neutral-300",
-                color === "#abd5bd" && "active",
+                color === "#e3e3e3" && "active",
               )}
-              onClick={() => setColor("#abd5bd")}
+              onClick={() => setColor("#e3e3e3")}
             ></div>
             <div
               className={clsx(
