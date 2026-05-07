@@ -2,8 +2,9 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import ProductViewer from "./components/ProductViewer";
-import gsap from "gsap";
+import Showcase from "./components/Showcase";
 import { ScrollTrigger } from "gsap/all";
+import gsap from "gsap";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,6 +19,9 @@ const App = () => {
 
       {/* Product Viewer Section */}
       <ProductViewer />
+
+      {/* Showcase Section */}
+      <Showcase />
 
       {/* Footer */}
       <Footer />
