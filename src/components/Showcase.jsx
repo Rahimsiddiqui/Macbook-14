@@ -1,5 +1,6 @@
 import { useMediaQuery } from "react-responsive";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
 
 const Showcase = () => {
@@ -14,6 +15,8 @@ const Showcase = () => {
           end: "bottom top",
           scrub: true,
           pin: true,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
         },
       });
 
@@ -22,7 +25,13 @@ const Showcase = () => {
           transform: "scale(1.1)",
         })
         .to(".content", { opacity: 1, y: 0, ease: "power1.in" });
+
+      ScrollTrigger.refresh();
     }
+
+    const handleLoad = () => ScrollTrigger.refresh();
+    window.addEventListener("load", handleLoad);
+    return () => window.removeEventListener("load", handleLoad);
   }, [isTablet]);
 
   return (
